@@ -1,8 +1,8 @@
 # Gatefold
 
-My own little ad-free music player. It plays full songs, lets me search, keeps my playlists, and suggests new music based on what I actually listen to. No ads, no subscription, no "upgrade to premium" pop-ups. It's the parts of a streaming app I actually use, minus the part that kept driving me crazy.
+My own little ad-free music player. It plays full songs, lets me search, keeps my playlists, and suggests new music based on what I like to listen to. No ads, no subscription, no "upgrade to premium" pop-ups. It's the parts of a streaming app I actually use, minus the part that kept driving me crazy.
 
-**Try it here:** https://YOUR-USERNAME.github.io/gatefold/
+**Try it here:** https://michaelq999.github.io/gatefold/
 
 (The first time, you'll need a free key from Jamendo. It takes about five minutes, and the steps are further down.)
 
@@ -12,19 +12,19 @@ My own little ad-free music player. It plays full songs, lets me search, keeps m
 
 ## Why I made this
 
-I have music on pretty much any time I'm at the gym or studying. The thing that kept breaking my concentration wasn't the music. It was the ads. You're in the middle of a set, or finally getting into a problem, and suddenly someone's trying to sell you something. Then it happens again twenty minutes later.
+I have music on pretty much any time I'm at the gym or studying. The thing that kept breaking my concentration wasn't the music. It was the ads. You're in the middle of a set, or finally getting into a problem, and suddenly someone's trying to sell you something. Then it happens again 5 minutes later.
 
 At some point I got annoyed enough to wonder how hard it would be to make my own player. I'd never really built a website or an app before, so this turned into a crash course in how they actually work.
 
 ## What I figured out along the way
 
-The first surprise: an app being able to *find* a song is a completely different thing from being able to *play* it. Lots of music services will happily give you a song's title, artist and cover art. Very few will hand over the actual audio.
+The first surprise: an app being able to *find* a song is a completely different thing from being able to *play* it. Lots of music services will happily give you a song's title, artist and cover art. Very few will hand over  actual audio.
 
 So I went through the usual suspects. Spotify does let developers build their own players, but only with Premium, both for the person building the app and for the person listening, so "free and no ads" was off the table. YouTube has basically every song ever, but its developer rules say an app can't block YouTube's ads, and the video has to stay on screen. Apple Music needs a subscription plus a paid developer membership on top.
 
 Then I found Jamendo: a free catalog of around half a million songs by independent artists who share their music under Creative Commons licenses. Full songs, no ads, and free for personal, non-commercial projects like this one.
 
-The catch is that my actual favorites (Don Toliver, Taylor Swift, Katy Perry) aren't on it. I couldn't find any legit way to play major-label music for free without ads, so I had to pick, and I picked no ads. My favorites still count for something, though: the app uses them as a starting point and asks Jamendo for independent songs in a similar style. When it does that, it says so, so I always know why a song showed up. The upside is that it's a built-in excuse to find artists I'd never have come across otherwise.
+The catch is that my actual favorites (Don Toliver, Taylor Swift, Katy Perry) aren't on it. I couldn't find any legit way to play major-label music for free without ads, so I had to pick, and I picked no ads. My favorites still count for something, though: the app uses them as a starting point and asks Jamendo for independent songs in a similar style. When it does that, it says so, so I always know why a song showed up. This feature is also great for exposing me to smaller artists I'd never have come across otherwise.
 
 ## What it does
 
@@ -63,7 +63,7 @@ The name comes from gatefold sleeves, the album covers that open up like a book.
 
 ## How it got built
 
-I built this with Claude (Anthropic's AI) as a coding partner. I started from a detailed brief of what I wanted: three screens, real playback, no fluff, no ads, no stats. The big calls were mine, like which music source to go with, what to give up to keep it ad-free, and how it should look and feel. Claude did the research legwork, wrote and tested the code, and explained the tradeoffs along the way so I could decide.
+I built this with Claude (Anthropic's AI) as a coding partner. I started from a detailed brief of what I wanted: three screens, real playback, no fluff, no ads, no stats. I deceided which music source to go with, what to give up to keep it ad-free, and how it should look and feel. Claude did the research legwork, wrote and tested the code, and explained the tradeoffs along the way so I could decide.
 
 A few things I found interesting about how it works:
 
@@ -74,7 +74,7 @@ A few things I found interesting about how it works:
 
 ## Using it yourself
 
-1. Get a free key from Jamendo. Sign up at [devportal.jamendo.com](https://devportal.jamendo.com), create an "application" (any name works), and copy its **Client ID**.
+1. Get a free key from Jamendo. Sign up at [devportal.jamendo.com](https://devportal.jamendo.com), create an "application" (any name works), and copy its Client ID.
 2. Open the app, either from the link at the top or by downloading `index.html` and double-clicking it.
 3. Paste the Client ID in and hit Connect.
 4. Open Settings (the little slider icon, top right) and press **Check the connection**. It runs the real requests and tells you in plain words whether everything works, including whether songs come through full-length.
